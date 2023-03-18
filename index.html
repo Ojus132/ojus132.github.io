@@ -117,7 +117,7 @@
         <br><br>
         </div>
 
-        <div style="background-color: beige;color:white" id="jsDiv">
+        <div id="jsDiv" style="background-color: beige;color:white">
         <button onclick="alert('Dont click every button you see you may end up in some worse place if it werent me')" style="color:white;background-color:black">
             CLICK ME
         </button>
@@ -132,7 +132,7 @@
 
         <script>
             function changeColor(){
-                document.jsDiv.style.backgroundColor="black";
+                document.getElementById("jsDiv").style.backgroundColor="#AC9362";
             }
         </script>
         <button onclick="changeColor()">
