@@ -19,9 +19,7 @@
             <nav>
                 <ul>
                     <li><a href="#randomForm">Random form</a></li>
-                    <li><a href="#dummyText">Dummy Text</a></li> 
-                    <li><a href="#audVidTab">Video, Audio and Table</a></li>
-                    <li><a href="#jsDiv">Some JS using onclick</a></li> 
+                    <li><a href="#dummyText">Dummy Text</a></li>  
                 </ul>
             </nav>
         <br><br>
@@ -89,7 +87,7 @@
         <br><br>
         </div>
         
-        <div id="audVidTab" style="background-color:black;color:white;overflow:hidden">
+        <div style="background-color:black;color:white;overflow:hidden">
         <p>
             One of my stupid yt vids(with iframe)
         </p>
@@ -119,10 +117,12 @@
         <br><br>
         </div>
 
-        <div id="jsDiv" style="background-color: beige;color:white">
+        <div id="jsDiv" style="background-color: beige;color:black">
         <button onclick="alert('Dont click every button you see you may end up in some worse place if it werent me')" style="color:white;background-color:black">
             CLICK ME
         </button>
+        <br><br>
+        <h2>JS basics division</h2>
         <br><br>
         <p align="center">
         <img src="https://ojus132.github.io/media/arrowLeft.png" id="arrow" width="40%">
@@ -132,14 +132,26 @@
         </p>
         <br><br>
 
-        <script>
-            function changeColor(){
-                document.getElementById("jsDiv").style.backgroundColor="#AC9362";
-            }
-        </script>
-        <button onclick="changeColor()">
-            Dark mode
-        </button>
+        
+    
+    <script>
+      function changeColor(){
+        var txtColor=document.getElementById("jsDiv").style.color;
+        var bgColor=document.getElementById("jsDiv").style.backgroundColor;
+        if((txtColor=="black")&&(bgColor=="beige")){
+          document.getElementById("jsDiv").style.color="white";
+          document.getElementById("jsDiv").style.backgroundColor="#9F8C76";
+          document.getElementById("jsButton").innerHTML="LIGHT MODE";
+        }
+        else{
+          document.getElementById("jsDiv").style.color="black";
+          document.getElementById("jsDiv").style.backgroundColor="beige";
+          document.getElementById("jsButton").innerHTML="DARK MODE";
+        }
+        }
+    </script>
+    <button onclick="changeColor()" id="jsButton"> DARK MODE </button>
+
         
         <br><br>
         </div>
